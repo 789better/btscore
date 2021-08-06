@@ -20,7 +20,6 @@ $( document ).ready(function() {
     });
     }, 100);
 
-    $('#customers').append('<tr><td>my data</td><td>more data</td></tr>');
 
 
   });
