@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <title>Scoreboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <div class="body1">
+    <div class="container">
+      <div class="headform">
+      <div class="freebirdSolidBackground"></div>
+      <h1>Banner 789 BT</h1>
+      <span>Scoreboard กิจกรรม ...</span>
+      </div>
+      <div class="form">
+        <form action="https://script.google.com/macros/s/AKfycbz9_Phj4mJbq5Ar9Q2sTVvAZlET0uSDed3qSmx8XTKk3Db8myJjdCb9Nw/exec" method="get" target="dummyframe" class="form-send" id="form">
+  <label for="fname">ระบุชื่อจริง:</label><br>
+  <input type="text" id="fname" name="fname" required><br>
+  <label for="lname">ระบุนามสกุล:</label><br>
+  <input type="text" id="lname" name="lname" required><br>
+  <label for="lid">ระบุไอดีไลน์ (Line ID):</label>
+  <input type="text" id="lid" name="lid" required><br>
+  <label for="tel">ระบุเบอร์โทร:</label><br>
+  <input type="text" id="tel" name="tel" maxlength="10" placeholder="09xxxxxxxx" required>
+  <label for="time">ระบุช่วงเวลาโอน:</label><br>
+  <input type="text" id="time" name="time" placeholder="เช่น 13.15 น. วันนี้" required><br>
+  <label for="channel">ช่องทางการโอนเงิน:</label><br>
+    <select id="channel" name="channel" required>
+    <option value="">--โปรดเลือก--</option>
+    <option value="truemoney">โอนจาก Truemoney</option>
+    <option value="bank">โอนจาก ธนาคาร</option>
+    <option value="seven">เติมเงินผ่าน 7-11</option>
+    </select>
+    <br>
+    <input name="file" id="uploadfile" type="file" style="margin: 10px 10px;"><br>
+    <label for="channel" style="text-size:small;">**โปรดแนบหลักฐานการโอน</label>
+  <input name="filename" id="filename" type="text" style="display:none;">
+  <input type="text" style="display:none;"id="method" name="method" value="joinlive">
+  <input type="submit" value="แจ้งชำระโอน" id="submit" onclick="submit_c();">
+  <input type="submit" id="submit1" style="display:none;">
+</form>
+<div id="confirm" style="color:red;text-align:center;display:none;"><h1>**แจ้งชำระโอนสำเร็จ**</h1>
+<p>ทีมงานจะรีบประสานงานโดยไวที่สุด หากล่าช้าเกิน 24 ชม. ให้แจ้งเข้ามาอีกครั้ง</p><p>กรณีไม่ได้แนบสลิปโอน กรุณาระบุข้อมูลให้ครบถ้วน</p></div>
+<div id="confirm1" style="color:blue;text-align:center;display:none;"><h1>กำลังส่งข้อมูล รอสักครู่</h1></div>
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+      </div>
+    </div>
+</div>
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div>
+        <div class="popupCloseButton">&times;</div>
+        <p>เกิดข้อผิดพลาด โปรดระบุข้อมูลให้ครบถ้วน<p>
+        <p class="popupalert"></p>
+    </div>
+  </body>
+
+</div>
+</html>
