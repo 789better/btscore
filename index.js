@@ -3,17 +3,22 @@
 
 // Write Javascript code!
 
-$('.moreless-button').click(function() {
-  $('.moretext').slideToggle();
-  if ($('.moreless-button').text() == "อ่านกติกา") {
-    $(this).text("ย่อให้น้อยลง")
-  } else {
-    $(this).text("อ่านกติกา")
-  }
-});
+
 
 
 $( document ).ready(function() {
+
+  $('.moreless-button').click(function() {
+    $('.moretext').slideToggle();
+    if ($('.moreless-button').text() == "อ่านกติกา") {
+      $(this).text("ย่อให้น้อยลง")
+    } else {
+      $(this).text("อ่านกติกา")
+    }
+  });
+
+
+  
 
   setTimeout(function(){
     $.ajax({
