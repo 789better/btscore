@@ -1,7 +1,17 @@
 // Import stylesheets
-
+//import './styles.css';
 
 // Write Javascript code!
+
+$('.moreless-button').click(function() {
+  $('.moretext').slideToggle();
+  if ($('.moreless-button').text() == "อ่านกติกา") {
+    $(this).text("ย่อให้น้อยลง")
+  } else {
+    $(this).text("อ่านกติกา")
+  }
+});
+
 
 $( document ).ready(function() {
 
@@ -14,7 +24,7 @@ $( document ).ready(function() {
         for (var i = 2; i < 202; i = i + 2) {
           var user = entries[i].content.$t;
           var score = entries[i+1].content.$t;
-          $('#customers').append('<tr><td>'+user+'</td><td>'+score+'</td></tr>');
+          $('#customers').append('<tr><td>'+(i/2)+'</td><td>'+user+'</td><td>'+score+'</td></tr>');
         }
       }
     });
