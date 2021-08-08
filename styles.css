@@ -53,19 +53,21 @@ body {
 
   .form1 {
     margin : 5px 0px; 
-    background-color:white;
+    background-color:#282A35;
     border-radius:20px;
     text-align:center;
     padding: 10px 0px;
-
+    color:white;
   }
 
   .form1 p {
     margin : 5px 0px; 
+    color:white;
   }
 
   .form1 h2 {
     margin : 10px 0px; 
+    color:#FFC0C7;
   }
 
 input[type=text], select {
@@ -213,6 +215,8 @@ font-size:30px;
   border: none;
   color: white;
   padding: 10px 32px;
+  border-radius: 4px;
+  width:50%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -234,4 +238,38 @@ font-size:30px;
   width: 80%;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+}
+
+
+
+
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;  
+}
+
+:-ms-input-placeholder {  
+  text-align: center; 
+}
+
+.searchf{
+
+  border-radius:20px; 
+  background-color:#f2f2f2; 
+  padding: 20px;
+  max-width:70%;
+  margin:auto;
+  display:none;
+}
+
+.button:hover {
+  background-color: #45a049;
 }
