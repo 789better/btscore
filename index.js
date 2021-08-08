@@ -52,9 +52,7 @@ $( document ).ready(function() {
 
     $('.surf').click(function() {
       let surf = $( "#user" ).val().toLowerCase();
-
       if (surf.substring(0, 2) != "bt"){alert('โปรดระบุ User ขึ้นต้นด้วย bt เท่านั้น');return;}
-
       var ranking = JSON.parse(localStorage.getItem("lastname"));
       console.log (ranking[0])
       var chk = 0;
@@ -63,9 +61,12 @@ $( document ).ready(function() {
         chk = chk+1;
       }
       if (chk == 100) {alert('USER : '+surf+' ไม่อยู่ใน 100 อันดับแรก')}
-
-
     });
+    $('#user').keypress(function(e){
+      if(e.which == 13){//Enter key pressed
+          $('.surf').click();//Trigger search button click event
+      }
+  });
 
 
   });
