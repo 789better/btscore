@@ -60,7 +60,7 @@ $( document ).ready(function() {
         if (surf == order.user){alert('ท่านอยู่ลำดับที่ '+order.ranks);break;}
         chk = chk+1;
       }
-      if (chk == 100) {alert('USER : '+surf+' ไม่อยู่ใน 100 อันดับแรก')}
+      if (chk == 100) {alert('USER : '+surf+' ท่านจะร่วมกิจกรรมได้ทันทีเมื่อคะแนนยอดเล่นของท่านติด 100 อันดับแรก')}
     });
     $('#user').keypress(function(e){
       if(e.which == 13){//Enter key pressed
