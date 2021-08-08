@@ -42,6 +42,7 @@ $( document ).ready(function() {
         }
         $('.searchf').slideToggle();
         localStorage.setItem("lastname",JSON.stringify(ranking))
+        $('.update').text('อัพเดทตารางคะแนนล่าสุด '+entries[0].content.$t);
         
       }
     });
