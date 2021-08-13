@@ -23,7 +23,10 @@ $( document ).ready(function() {
   setTimeout(function(){
     $.ajax({
       type: 'GET',
-      url: "https://789better.github.io/score.json",
+      /*
+      https://spreadsheets.google.com/feeds/cells/1BJ9WzOLi8J8DNXZo6Zb2ue1Wo2rUgarCRI3mQaZ5KfQ/1/public/full?alt=json
+      */
+      url: "https://789better.github.io/btscore/score.json",
       success: function (response) {
         var ranking =[];
         var entries = response.feed.entry;
