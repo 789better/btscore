@@ -14,7 +14,7 @@ $( document ).ready(function() {
       $(this).text("ย่อให้น้อยลง")
     } else {
       $(this).text("อ่านกติกา")
-    }
+    } 
   });
 
 
