@@ -6,6 +6,8 @@
 
 
 
+
+
 $( document ).ready(function() {
 
   $('.moreless-button').click(function() {
@@ -26,26 +28,25 @@ $( document ).ready(function() {
       /*
       https://spreadsheets.google.com/feeds/cells/1BJ9WzOLi8J8DNXZo6Zb2ue1Wo2rUgarCRI3mQaZ5KfQ/1/public/full?alt=json
       */
-      url: "https://789better.github.io/btscore/score.json",
+      url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQz42O4ECpF64BSW5FkVWNQlg08wNwxn4HPbpnFhOTG-p21x97DAmA3vDGx5U5fxEqSLff5BiLkaSYv/pub?gid=0&single=true&output=csv",
       success: function (response) {
+        const contents = response.replace(/\n/g,',');
+        const rows = contents.split(",");
+
         var ranking =[];
-        var entries = response.feed.entry;
         for (var i = 2; i < 202; i = i + 2) {
-          
-          var myUser = entries[i].content.$t.split(" ");
+          var myUser = rows[i].split(" ");
           const user = myUser[0];
-          var score = entries[i+1].content.$t;
+          var score = rows[i+1];
           $('#customers').append('<tr><td>'+(i/2)+'</td><td>'+user+'</td><td>'+score+'</td></tr>');
-          
           var jso = {}
           jso.ranks = i/2;
           jso.user = user;
           ranking.push(jso)
-
         }
         $('.searchf').slideToggle();
         localStorage.setItem("lastname",JSON.stringify(ranking))
-        $('.update').text('อัพเดทตารางคะแนนล่าสุด '+entries[0].content.$t);
+        $('.update').text('อัพเดทตารางคะแนนล่าสุด '+rows[0]);
         
       }
     });
