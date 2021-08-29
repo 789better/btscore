@@ -52,7 +52,8 @@ $( document ).ready(function() {
           var myUser = rows[i].split(" ");
           const user = myUser[0];
           var score = rows[i+1];
-          if (i<202){$('#customers').append('<tr><td>'+(i/2)+'</td><td>'+user+'</td><td>'+score+'</td></tr>');}
+          //if (i<202){$('#customers').append('<tr><td>'+(i/2)+'</td><td>'+user+'</td><td>'+score+'</td></tr>');}
+          $('#customers').append('<tr><td>'+(i/2)+'</td><td>'+user+'</td><td>'+score+'</td></tr>');
           var jso = {}
           jso.ranks = i/2;
           jso.user = user;
