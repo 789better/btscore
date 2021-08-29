@@ -48,11 +48,11 @@ $( document ).ready(function() {
         const rows = contents.split(",");
 
         var ranking =[];
-        for (var i = 2; i < 202; i = i + 2) {
+        for (var i = 2; i < 402; i = i + 2) {
           var myUser = rows[i].split(" ");
           const user = myUser[0];
           var score = rows[i+1];
-          $('#customers').append('<tr><td>'+(i/2)+'</td><td>'+user+'</td><td>'+score+'</td></tr>');
+          if (i<202){$('#customers').append('<tr><td>'+(i/2)+'</td><td>'+user+'</td><td>'+score+'</td></tr>');}
           var jso = {}
           jso.ranks = i/2;
           jso.user = user;
@@ -78,7 +78,7 @@ $( document ).ready(function() {
         if (surf == order.user){alert('ท่านอยู่ลำดับที่ '+order.ranks);break;}
         chk = chk+1;
       }
-      if (chk == 100) {alert('USER : '+surf+' ท่านจะร่วมกิจกรรมได้ทันทีเมื่อคะแนนยอดเล่นของท่านติด 100 อันดับแรก')}
+      if (chk == 100) {alert('USER : '+surf+' ท่านจะร่วมกิจกรรมได้ทันทีเมื่อคะแนนยอดเล่นของท่านติด 200 อันดับแรก')}
     });
     $('#user').keypress(function(e){
       if(e.which == 13){//Enter key pressed
