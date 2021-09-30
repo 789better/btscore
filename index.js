@@ -3,7 +3,7 @@
 
 // Write Javascript code!
 
-var countDownDate = new Date("Sep 18, 2021 11:00:00").getTime();
+var countDownDate = new Date("Oct 2, 2021 11:00:00").getTime();
 var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
@@ -15,7 +15,8 @@ var x = setInterval(function() {
   + minutes + " นาที " + seconds + " วินาที ";
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "สิ้นสุดกิจกรรมแล้ว ประกาศผล Line: @789BT";
+    //document.getElementById("demo").innerHTML = "สิ้นสุดกิจกรรมแล้ว ประกาศผล Line: @789BT";
+    document.getElementById("demo").innerHTML = "เริ่มกิจกรรมแล้ว";
   }
 }, 1000);
 
