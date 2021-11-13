@@ -3,7 +3,7 @@
 
 // Write Javascript code!
 
-var countDownDate = new Date("Nov 6, 2021 11:00:00").getTime();
+var countDownDate = new Date("Nov 20, 2021 11:00:00").getTime();
 var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
